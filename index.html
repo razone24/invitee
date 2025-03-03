@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invitație Eveniment</title>
+    <!-- Google Fonts for nicer typography -->
+    <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="#" class="logo">Invitație</a>
+        <button class="navbar-toggle" id="navbar-toggle">&#9776;</button>
+        <ul class="navbar-menu" id="navbar-menu">
+            <li><a href="#hero">Acasă</a></li>
+            <li><a href="#descriere">Descriere</a></li>
+            <li><a href="#locatie">Locație</a></li>
+            <li><a href="#rsvp">Confirmare</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Hero Section with Circular Countdown -->
+<section id="hero">
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Nunta noastră</h1>
+        <p>Evenimentul va avea loc pe 5 iulie 2025</p>
+
+        <!-- Circular Countdown -->
+        <div class="countdown-container">
+            <div class="countdown-circle">
+                <span id="days"></span>
+                <span class="label">Zile</span>
+            </div>
+            <div class="countdown-circle">
+                <span id="hours"></span>
+                <span class="label">Ore</span>
+            </div>
+            <div class="countdown-circle">
+                <span id="minutes"></span>
+                <span class="label">Minute</span>
+            </div>
+            <div class="countdown-circle">
+                <span id="seconds"></span>
+                <span class="label">Secunde</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Descriere Section -->
+<section id="descriere" class="text-section">
+    <div class="container content descriere-content">
+        <h2 class="descriere-title">Dragi prieteni și familie</h2>
+        <p class="descriere-subtitle"><b>5 Iulie 2025</b></p>
+
+        <p>Suntem <b>Răzvan</b> și <b>Ioana</b>, iar noi… ne căsătorim! 🥳🎉</p>
+
+        <p>E momentul să sărbătorim dragostea, râsetele și toate momentele magice pe care le-am trăit împreună, și vrem să fiți alături de noi în această zi super specială!</p>
+
+        <p>
+            <strong>Când?</strong><br>
+            5 Iulie 2025 <br>
+            Cununia religioasă va începe de la ora 18:00 în grădina locației, iar apoi petrecerea va continua la locație.
+        </p>
+
+        <p>
+            <strong>Unde?</strong><br>
+            La The White Manor (așa că pregătiți-vă să veniți cu pantofii de dans!)
+        </p>
+
+        <p>
+            <strong>Transport?</strong><br>
+            Nu vă faceți griji pentru mașină! 🚗 Ne ocupăm noi de transport: plecarea de la punctul de întâlnire din Piața Constituției se va face la ora 16:45, astfel încât să nu fie nevoie să veniți cu mașina. După petrecere, va fi asigurat autobuzul de întoarcere către București. Distrați-vă, savurați un pahar 🍻 și lăsați-ne pe noi să ne ocupăm de restul! 😎
+        </p>
+
+        <p>Vă rugăm să confirmați prezența până pe 5 Iunie 2025.</p>
+
+        <p>Abia așteptăm să vă vedem și să facem din această zi o adevărată petrecere!</p>
+        <!-- Section with 2 circle images -->
+        <div class="circle-images">
+            <img src="image1.jpeg" alt="Imagine Descriere 1">
+            <img src="image2.jpeg" alt="Imagine Descriere 2">
+        </div>
+    </div>
+</section>
+
+<!-- Locație Section -->
+<section id="locatie" class="text-section">
+    <div class="overlay"></div>
+    <div class="container content">
+        <div class="maps-container">
+            <!-- Map Area 1 -->
+            <div class="map-area">
+                <h3>Locație Eveniment</h3>
+                <br>
+                <p><b>5 Iulie 2025 ora 18:00</b></p>
+                <p><b>The White Manor</b></p>
+                <p>
+                    <a href="https://www.google.com/maps/place/The+White+Manor/@44.7152621,26.1146475,17z/data=!3m1!4b1!4m6!3m5!1s0x47490dcbfca7031d:0xaf5f7c49be676d70!8m2!3d44.7152621!4d26.1172224!16s%2Fg%2F11rh_8wp2t?entry=ttu&g_ep=EgoyMDI1MDIyNC4wIKXMDSoASAFQAw%3D%3D"
+                       target="_blank">Str. Platanilor Nr.15, Comuna Ciolpani</a>
+                </p>
+                <div class="map-container">
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2835.2131075134976!2d26.114647475838325!3d44.71526207107153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490dcbfca7031d%3A0xaf5f7c49be676d70!2sThe%20White%20Manor!5e0!3m2!1sen!2sro!4v1740600821606!5m2!1sen!2sro"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Map Area 2 -->
+            <div class="map-area">
+                <h3>Punct de întâlnire pentru transport către locație</h3>
+                <p><b>5 Iulie 2025 ora 16:45</b></p>
+                <p><b>Piața Constituției</b></p>
+                <p>
+                    <a href="https://maps.app.goo.gl/BoiCEvcdDH1zUaB99"
+                       target="_blank">Piața Constituției, București</a>
+                </p>
+                <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.2827372503853!2d26.089046576169007!3d44.427362202017946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff6b7c74a607%3A0xe10ea526787ebb4f!2zIlBpYcibYSBDb25zdGl0dcibaWVpIiBQYXJraW5n!5e0!3m2!1sen!2sro!4v1740842329406!5m2!1sen!2sro"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RSVP Section -->
+<section id="rsvp" class="form-section">
+    <div class="overlay"></div>
+    <div class="container content">
+        <h2>Confirmare</h2>
+        <p class="rsvp-subtitle">Așteptăm răspunsul până la data de 5 Iunie 2025</p>
+        <form id="rsvp-form">
+            <div class="form-group">
+                <label for="numar_persoane">Număr de persoane</label>
+                <select id="numar_persoane" name="numar_persoane" required>
+                    <option value="">Selectați</option>
+                    <option value="1">1 persoană</option>
+                    <option value="2">2 persoane</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="copii">Număr de copii</label>
+                <select id="copii" name="copii" required>
+                    <option value="">Selectați</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="meniu">Tip meniu</label>
+                <select id="meniu" name="meniu" required>
+                    <option value="">Selectați</option>
+                    <option value="normal">Normal</option>
+                    <option value="vegetarian">Vegetarian</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="transport">Vrei transport?</label>
+                <select id="transport" name="transport" required>
+                    <option value="">Selectați</option>
+                    <option value="da">Da</option>
+                    <option value="nu">Nu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="informatii">Informații suplimentare</label>
+                <input type="text" id="informatii" name="informatii" placeholder="Orice informații suplimentare?">
+            </div>
+            <div class="form-group">
+                <label for="nume">Nume și prenume</label>
+                <input type="text" id="nume" name="nume" placeholder="Numele dvs." required>
+            </div>
+            <button type="submit">Trimite</button>
+        </form>
+        <!-- Confirmation message (hidden by default) -->
+        <div id="confirmation" class="confirmation-message" style="display: none;">
+            <h3>Mulțumim pentru confirmare!</h3>
+            <p>Vă așteptăm cu drag la eveniment.</p>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+
+</html>
