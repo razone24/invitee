@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // =========================
-    // 1. Circular Countdown
-    // =========================
-    const eventDate = new Date("2025-07-05T00:00:00"); // Eveniment pe 5 iulie 2025
-
+    // Countdown code remains the same
+    const eventDate = new Date("2025-07-05T00:00:00");
     const daysSpan = document.getElementById("days");
     const hoursSpan = document.getElementById("hours");
     const minutesSpan = document.getElementById("minutes");
@@ -35,23 +32,49 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    // =========================
-    // 2. Form Submission
-    // =========================
+    // Toggle name fields based on number of persons selected
+    document.getElementById('numar_persoane').addEventListener('change', function () {
+        const value = this.value;
+        const primaryField = document.getElementById('nume-field');
+        const partnerField = document.getElementById('partner-field');
+        const nume1Input = document.getElementById('nume1');
+        const nume2Input = document.getElementById('nume2');
+
+        if (value === "1") {
+            primaryField.style.display = "block";
+            partnerField.style.display = "none";
+            nume1Input.setAttribute('required', 'required');
+            nume2Input.removeAttribute('required');
+        } else if (value === "2") {
+            primaryField.style.display = "block";
+            partnerField.style.display = "block";
+            nume1Input.setAttribute('required', 'required');
+            nume2Input.setAttribute('required', 'required');
+        } else {
+            // When nothing is selected, hide both fields
+            primaryField.style.display = "none";
+            partnerField.style.display = "none";
+            nume1Input.removeAttribute('required');
+            nume2Input.removeAttribute('required');
+        }
+    });
+
+    // Form submission code
     const form = document.getElementById("rsvp-form");
     const confirmationMsg = document.getElementById("confirmation");
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        // Collect form data
+        // Collect form data, including conditional fields
         const formData = {
             numar_persoane: document.getElementById("numar_persoane").value,
             copii: document.getElementById("copii").value,
             meniu: document.getElementById("meniu").value,
             transport: document.getElementById("transport").value,
             informatii: document.getElementById("informatii").value,
-            email: document.getElementById("nume").value
+            email: document.getElementById("nume1").value,
+            partener: document.getElementById("numar_persoane").value === "2" ? document.getElementById("nume2").value : ""
         };
 
         // Replace with your actual Google Apps Script Web App URL
@@ -59,14 +82,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         fetch(scriptURL, {
             method: "POST",
-            mode: "no-cors", // If needed to avoid CORS issues
+            mode: "no-cors",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(formData)
         })
             .then(() => {
-                // Hide the form and show confirmation
                 form.style.display = "none";
                 confirmationMsg.style.display = "block";
             })
@@ -75,8 +97,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert("Eroare la trimiterea formularului. Încercați din nou.");
             });
     });
-});
 
-document.getElementById('navbar-toggle').addEventListener('click', function () {
-    document.getElementById('navbar-menu').classList.toggle('active');
+    document.getElementById('navbar-toggle').addEventListener('click', function () {
+        document.getElementById('navbar-menu').classList.toggle('active');
+    });
 });

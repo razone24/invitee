@@ -374,6 +374,27 @@ body {
     padding-top: 70px; /* adjust depending on navbar height */
 }
 
+/* Force consistent styling for dynamic name field labels */
+#nume-field label,
+#partner-field label {
+    display: block !important;
+    text-align: left !important;
+    font-size: 1rem !important;
+    margin-bottom: 5px !important;
+    color: #333 !important;
+}
+
+#nume-field input,
+#partner-field input {
+    width: 100% !important;
+    padding: 12px !important;
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+}
+
 /* RESPONSIVE STYLES */
 @media (max-width: 768px) {
     .content {

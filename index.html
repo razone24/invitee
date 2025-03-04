@@ -149,6 +149,20 @@
                     <option value="2">2 persoane</option>
                 </select>
             </div>
+
+            <!-- Primary name field (hidden by default) -->
+            <div class="form-group" id="nume-field" style="display: none;">
+                <label for="nume1">Nume și prenume</label>
+                <input type="text" id="nume1" name="nume1" placeholder="Numele dvs.">
+            </div>
+
+            <!-- Partner name field (hidden by default) -->
+            <div class="form-group" id="partner-field" style="display: none;">
+                <label for="nume2">Numele partenerului</label>
+                <input type="text" id="nume2" name="nume2" placeholder="Numele partenerului">
+            </div>
+
+            <!-- Other form fields (e.g., copii, meniu, transport, informatii) -->
             <div class="form-group">
                 <label for="copii">Număr de copii</label>
                 <select id="copii" name="copii" required>
@@ -180,13 +194,9 @@
                 <label for="informatii">Informații suplimentare</label>
                 <input type="text" id="informatii" name="informatii" placeholder="Orice informații suplimentare?">
             </div>
-            <div class="form-group">
-                <label for="nume">Nume și prenume</label>
-                <input type="text" id="nume" name="nume" placeholder="Numele dvs." required>
-            </div>
+
             <button type="submit">Trimite</button>
         </form>
-        <!-- Confirmation message (hidden by default) -->
         <div id="confirmation" class="confirmation-message" style="display: none;">
             <h3>Mulțumim pentru confirmare!</h3>
             <p>Vă așteptăm cu drag la eveniment.</p>
