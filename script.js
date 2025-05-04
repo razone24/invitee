@@ -62,9 +62,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // Form submission code
     const form = document.getElementById("rsvp-form");
     const confirmationMsg = document.getElementById("confirmation");
+    const overlay = document.getElementById("loading-overlay");
+    const submitBtn = form.querySelector('button[type="submit"]');
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
+
+        // show loading, disable submit
+        overlay.style.display = "flex";
+        submitBtn.disabled = true;
 
         // Collect form data, including conditional fields
         const formData = {
@@ -95,6 +101,10 @@ document.addEventListener('DOMContentLoaded', function () {
             .catch(error => {
                 console.error("Eroare:", error);
                 alert("Eroare la trimiterea formularului. Încercați din nou.");
+            })
+            .finally(() => {
+                overlay.style.display = "none";
+                submitBtn.disabled = false;
             });
     });
 
